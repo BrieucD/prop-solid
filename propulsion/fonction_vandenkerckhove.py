@@ -12,7 +12,7 @@ class FonctionVandenkerckhove(FonctionVandenkerckhoveBase):
         """ FonctionVandenkerckhove computation """
         gamma = inputs['gamma']
         
-        gamma_maj = sqrt(gamma)*((2/(gamma+1))**((gamma+1)/(2*(gamma-1))))
+        gamma_maj = np.sqrt(gamma)*((2/(gamma+1))**((gamma+1)/(2*(gamma-1))))
     
         outputs['gamma_maj'] = gamma_maj
         

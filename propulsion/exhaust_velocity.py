@@ -10,9 +10,13 @@ class ExhaustVelocity(ExhaustVelocityBase):
 		
     def compute(self, inputs, outputs):
         """ ExhaustVelocity computation """
-    
-        outputs['Ve'] = np.ones((1,))   
+        C_F = inputs['C_F']
+        C_star = inputs['C_star']
 
+        Ve = C_star * C_F
+
+        outputs['Ve'] = Ve  
+        return outputs 
 # Reminder: inputs of compute()
 #   
 #       inputs['C_F'] -> shape: (1,), type: Float    

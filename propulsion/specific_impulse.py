@@ -10,8 +10,13 @@ class SpecificImpulse(SpecificImpulseBase):
 		
     def compute(self, inputs, outputs):
         """ SpecificImpulse computation """
-    
-        outputs['Isp'] = np.ones((1,))   
+        g0 = inputs['g0']
+        Ve = inputs['Ve']
+
+        Isp = Ve / g0
+
+        outputs['Isp'] = Isp  
+        return outputs
 
 # Reminder: inputs of compute()
 #   

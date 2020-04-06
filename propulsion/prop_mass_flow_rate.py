@@ -10,12 +10,19 @@ class PropMassFlowRate(PropMassFlowRateBase):
 		
     def compute(self, inputs, outputs):
         """ PropMassFlowRate computation """
-        Ra=8314
-        M=29
-        R=Ra/M
-        prop_m=(Pc*At*gamma_maj)/(sqrt(R*Tc))
+        At = inputs['At']
+        gamma_maj = inputs['gamma_maj']
+        Pc = inputs['Pc']
+        R = inputs['R']
+        Tc = inputs['Tc']
+        Ra = 8314
+        M = 29
+        R = Ra/M
+
+        prop_m=(Pc*At*gamma_maj)/(np.sqrt(R*Tc))
         
-        outputs['prop_m'] = np.ones((1,))   
+        outputs['prop_m'] = prop_m
+        return outputs   
 
 # Reminder: inputs of compute()
 #   

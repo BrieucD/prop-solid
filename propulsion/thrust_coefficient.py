@@ -10,10 +10,15 @@ class ThrustCoefficient(ThrustCoefficientBase):
 		
     def compute(self, inputs, outputs):
         """ ThrustCoefficient computation """
-        
-        C_F=gamma_maj()
+        gamma = inputs['gamma']
+        gamma_maj = inputs['gamma_maj']
+        Pc = inputs['Pc']
+        Pe = inputs['Pe']
+
+        C_F = gamma_maj * np.sqrt(((2*gamma)/(gamma-1)) * (1-((Pe/Pc)**((gamma-1)/gamma))))
     
-        outputs['C_F'] = np.ones((1,))   
+        outputs['C_F'] = C_F
+        return outputs 
 
 # Reminder: inputs of compute()
 #   

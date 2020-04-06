@@ -10,11 +10,17 @@ class CharacteristicVelocity(CharacteristicVelocityBase):
 		
     def compute(self, inputs, outputs):
         """ CharacteristicVelocity computation """
-        Ra=8314
-        M=29
-        R=Ra/M
-        C_star=(1/gamma_maj)*(sqrt(R*Tc)
-        outputs['C_star'] = np.ones((1,))   
+        gamma_maj = inputs['gamma_maj']
+        R = inputs['R']
+        Tc = inputs['Tc']
+        Ra = 8314
+        M = 29
+        R = Ra/M
+
+        C_star = (1/gamma_maj)*np.sqrt(R*Tc)
+
+        outputs['C_star'] = C_star
+        return outputs 
 
 # Reminder: inputs of compute()
 #   

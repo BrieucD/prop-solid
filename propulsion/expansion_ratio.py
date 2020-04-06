@@ -10,9 +10,16 @@ class ExpansionRatio(ExpansionRatioBase):
 		
     def compute(self, inputs, outputs):
         """ ExpansionRatio computation """
+        gamma = inputs['gamma']
+        gamma_maj = inputs['gamma_maj']
+        Pc = inputs['Pc']
+        Pe = inputs['Pe']
+
+        epsilon = gamma_maj/(np.sqrt(((2*gamma)/(gamma-1))*((Pe/Pc)**(2/gamma))*(1-((Pe/Pc)**((gamma-1)/gamma)))))
         
-    epsilon=gamma_maj/(sqrt(((2*gamma)/(gamma-1))*((Pe/Pc)**(2/gamma))*(1-((Pe/Pc)**((gamma-1)/gamma)))))
-        outputs['epsilon'] = np.ones((1,))   
+        outputs['epsilon'] = epsilon
+
+        return outputs 
 
 # Reminder: inputs of compute()
 #   

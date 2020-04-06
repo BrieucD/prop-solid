@@ -1,0 +1,199 @@
+
+|  ==========
+|  Propulsion
+|  ==========
+|  NL: NLBGS Converged in 1 iterations
+|  
+|  =====
+|  Solid
+|  =====
+|  NL: NLBGS Converged in 0 iterations
+|  
+|  ====
+|  Mass
+|  ====
+|  NL: NLBGS Converged in 0 iterations
+NL: NLBGS Converged in 1 iterations
+63 Input(s) in 'model'
+----------------------
+
+varname                      value          
+---------------------------  ---------------
+top
+  Propulsion
+    FonctionVandenkerckhove
+      gamma                  [1.22]         
+    ExpansionRatio
+      gamma                  [1.22]         
+      gamma_maj              [0.65238638]   
+      Pc                     [5610000.]     
+      Pe                     [18327.]       
+    ThroatArea
+      Ae                     [1.5926]       
+      epsilon                [26.62286915]  
+    PropMassFlowRate
+      At                     [0.05982075]   
+      gamma_maj              [0.65238638]   
+      Pc                     [5610000.]     
+      R                      [286.689655]   
+      Tc                     [75.3]         
+    CharacteristicVelocity
+      gamma_maj              [0.65238638]   
+      R                      [286.689655]   
+      Tc                     [75.3]         
+    ThrustCoefficient
+      gamma                  [1.22]         
+      gamma_maj              [0.65238638]   
+      Pc                     [5610000.]     
+      Pe                     [18327.]       
+    ExhaustVelocity
+      C_F                    [1.74322919]   
+      C_star                 [225.21567455] 
+    ThrustForce
+      Ae                     [1.5926]       
+      Pa                     [26442.]       
+      Pe                     [18327.]       
+      prop_m                 [1490.10235737]
+      Ve                     [392.60253776] 
+      zeta                   [0.9363]       
+    SpecificImpulse
+      g0                     [9.80665]      
+      Ve                     [392.60253776] 
+  Solid
+    PropellantsMass
+      prop_m                 [1490.10235737]
+      SF                     [0.03]         
+      tb                     [1.]           
+    SolidRocketMass
+      Mp                     [1.]           
+      M_case                 [1.]           
+      M_igniter              [1.]           
+      M_nozzle               [1.]           
+    SolidMotorLength
+      Ds                     [1.27]         
+      FF                     [0.95]         
+      Mp                     [1.]           
+      rho_p                  [1.]           
+    LengthConvergentSection
+      beta                   [1.]           
+      Ds                     [1.27]         
+      Dt                     [1.]           
+    LengthDivergentSection
+      De                     [1.424]        
+      Dt                     [1.]           
+      Ru                     [1.]           
+      theta_n                [1.]           
+    SolidRocketLength
+      L_case                 [1.]           
+      L_conv                 [1.]           
+      L_div                  [1.]           
+  Mass
+    InterstageLength
+      L_conv                 [1.]           
+      L_div                  [1.]           
+    FairingLength
+      Ds                     [1.27]         
+    FairingMass
+      Ds                     [1.27]         
+      L_fairing              [1.]           
+    InterstageMass
+      Ds                     [1.27]         
+      k_sm                   [1.]           
+      S_int                  [1.]           
+    PadInterfaceMass
+      Ds                     [1.27]         
+    AvionicsMass
+      Ds                     [1.27]         
+      L_vehicle              [1.]           
+    PowerSubsystemMass
+      M_avionics             [1.]           
+    PayloadAdapterMass
+      M_PL                   [140.]         
+
+
+49 Explicit Output(s) in 'model'
+--------------------------------
+
+varname                      value           
+---------------------------  ----------------
+top
+  indeps
+    Ae                       [1.5926]        
+    beta                     [1.]            
+    De                       [1.424]         
+    Ds                       [1.27]          
+    Dt                       [1.]            
+    FF                       [0.95]          
+    g0                       [9.80665]       
+    gamma                    [1.22]          
+    k_sm                     [1.]            
+    L_vehicle                [1.]            
+    M_case                   [1.]            
+    M_igniter                [1.]            
+    M_nozzle                 [1.]            
+    M_PL                     [140.]          
+    Pa                       [26442.]        
+    Pc                       [5610000.]      
+    Pe                       [18327.]        
+    R                        [286.689655]    
+    rho_p                    [1.]            
+    Ru                       [1.]            
+    SF                       [0.03]          
+    S_int                    [1.]            
+    tb                       [1.]            
+    Tc                       [75.3]          
+    theta_n                  [1.]            
+    zeta                     [0.9363]        
+  Propulsion
+    FonctionVandenkerckhove
+      gamma_maj              [0.65238638]    
+    ExpansionRatio
+      epsilon                [26.62286915]   
+    ThroatArea
+      At                     [0.05982075]    
+    PropMassFlowRate
+      prop_m                 [1490.10235737] 
+    CharacteristicVelocity
+      C_star                 [225.21567455]  
+    ThrustCoefficient
+      C_F                    [1.74322919]    
+    ExhaustVelocity
+      Ve                     [392.60253776]  
+    ThrustForce
+      F_T                    [535651.6290759]
+    SpecificImpulse
+      Isp                    [40.0343173]    
+  Solid
+    PropellantsMass
+      Mp                     [1.]            
+    SolidRocketMass
+      M_SRM                  [1.]            
+    SolidMotorLength
+      L_case                 [1.]            
+    LengthConvergentSection
+      L_conv                 [1.]            
+    LengthDivergentSection
+      L_div                  [1.]            
+    SolidRocketLength
+      L_SRM                  [1.]            
+  Mass
+    InterstageLength
+      L_interstage           [1.]            
+    FairingLength
+      L_fairing              [1.]            
+    FairingMass
+      M_fairing              [1.]            
+    InterstageMass
+      M_interstage           [1.]            
+    PadInterfaceMass
+      M_pad                  [1.]            
+    AvionicsMass
+      M_avionics             [1.]            
+    PowerSubsystemMass
+      M_EPS                  [1.]            
+    PayloadAdapterMass
+      M_PLA                  [1.]            
+
+
+0 Implicit Output(s) in 'model'
+-------------------------------

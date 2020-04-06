@@ -10,10 +10,13 @@ class ThroatArea(ThroatAreaBase):
 		
     def compute(self, inputs, outputs):
         """ ThroatArea computation """
+        Ae = inputs['Ae']
+        epsilon = inputs['epsilon']
         
-        At=Ae/epsilon
+        At = Ae/epsilon
     
-        outputs['At'] = np.ones((1,))   
+        outputs['At'] = At
+        return outputs 
 
 # Reminder: inputs of compute()
 #   
