@@ -12,7 +12,7 @@ def initialize(mda):
     mda['Ds'] = 1.27
     mda['Dt'] = 1.0
     mda['FF'] = 0.95
-    mda['g0'] = 9.80665 
+    mda['g0'] = 9.80665
     mda['gamma'] = 1.22
     mda['k_sm'] = 1
     mda['L_vehicle'] = 1.0
