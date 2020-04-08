@@ -10,8 +10,15 @@ class SolidMotorLength(SolidMotorLengthBase):
 		
     def compute(self, inputs, outputs):
         """ SolidMotorLength computation """
-    
-        outputs['L_case'] = np.ones((1,))   
+        Ds = inputs['Ds']
+        FF = inputs['FF']
+        Mp = inputs['Mp']
+        rho_p = inputs['rho_p']
+
+        L_case = Mp / (rho_p * np.pi * (((0.99* Ds) / 2 )**2) * FF)
+
+        outputs['L_case'] = L_case
+        return outputs   
 
 # Reminder: inputs of compute()
 #   

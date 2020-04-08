@@ -10,8 +10,14 @@ class SolidRocketLength(SolidRocketLengthBase):
 		
     def compute(self, inputs, outputs):
         """ SolidRocketLength computation """
-    
-        outputs['L_SRM'] = np.ones((1,))   
+        L_case = inputs['L_case']
+        L_conv = inputs['L_conv']
+        L_div = inputs['L_div']
+
+        L_SRM = L_case + L_div + L_conv 
+
+        outputs['L_SRM'] = L_SRM
+        return outputs 
 
 # Reminder: inputs of compute()
 #   

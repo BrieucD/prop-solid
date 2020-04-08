@@ -10,8 +10,17 @@ class LengthDivergentSection(LengthDivergentSectionBase):
 		
     def compute(self, inputs, outputs):
         """ LengthDivergentSection computation """
-    
-        outputs['L_div'] = np.ones((1,))   
+        De = inputs['De']
+        Dt = inputs['Dt']
+        Ru = inputs['Ru']
+        print(inputs)
+        theta_n = inputs['theta_n']
+
+        L_div = Ru * np.sin(theta_n) + ((De - Dt - 2 * (Ru - Ru * np.cos(theta_n))) / (2 * np.tan(theta_n)))
+      
+      
+        outputs['L_div'] = L_div
+        return outputs 
 
 # Reminder: inputs of compute()
 #   

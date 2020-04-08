@@ -10,8 +10,14 @@ class PropellantsMass(PropellantsMassBase):
 		
     def compute(self, inputs, outputs):
         """ PropellantsMass computation """
-    
-        outputs['Mp'] = np.ones((1,))   
+        prop_m = inputs['prop_m']
+        SF = inputs['SF']
+        tb = inputs['tb']
+        
+        Mp = (prop_m * tb) * (1 + SF)
+  
+        outputs['Mp'] = Mp
+        return outputs
 
 # Reminder: inputs of compute()
 #   

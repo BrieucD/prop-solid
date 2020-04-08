@@ -10,8 +10,15 @@ class SolidRocketMass(SolidRocketMassBase):
 		
     def compute(self, inputs, outputs):
         """ SolidRocketMass computation """
-    
-        outputs['M_SRM'] = np.ones((1,))   
+        Mp = inputs['Mp']
+        M_case = inputs['M_case']
+        M_igniter = inputs['M_igniter']
+        M_nozzle = inputs['M_nozzle']
+
+        M_SRM = Mp + M_nozzle + M_case + M_igniter
+
+        outputs['M_SRM'] = M_SRM
+        return outputs
 
 # Reminder: inputs of compute()
 #   

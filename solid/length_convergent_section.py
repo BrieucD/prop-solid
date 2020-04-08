@@ -10,8 +10,14 @@ class LengthConvergentSection(LengthConvergentSectionBase):
 		
     def compute(self, inputs, outputs):
         """ LengthConvergentSection computation """
-    
-        outputs['L_conv'] = np.ones((1,))   
+        beta = inputs['beta']
+        Ds = inputs['Ds']
+        Dt = inputs['Dt']
+
+        L_conv = (Ds - Dt) / (2 * np.sin(beta))
+
+        outputs['L_conv'] = L_conv
+        return outputs   
 
 # Reminder: inputs of compute()
 #   
