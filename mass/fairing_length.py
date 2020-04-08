@@ -10,8 +10,12 @@ class FairingLength(FairingLengthBase):
 		
     def compute(self, inputs, outputs):
         """ FairingLength computation """
-    
-        outputs['L_fairing'] = np.ones((1,))   
+        Ds = inputs['Ds']
+
+        L_fairing = 1.1035 * (Ds **1.6385) + 2.3707
+
+        outputs['L_fairing'] = L_fairing
+        return outputs
 
 # Reminder: inputs of compute()
 #   

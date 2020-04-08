@@ -10,8 +10,12 @@ class PowerSubsystemMass(PowerSubsystemMassBase):
 		
     def compute(self, inputs, outputs):
         """ PowerSubsystemMass computation """
-    
-        outputs['M_EPS'] = np.ones((1,))   
+        M_avionics = inputs['M_avionics']
+
+        M_EPS = 0.3321* M_avionics 
+
+        outputs['M_EPS'] = M_EPS
+        return outputs  
 
 # Reminder: inputs of compute()
 #   

@@ -10,8 +10,12 @@ class PayloadAdapterMass(PayloadAdapterMassBase):
 		
     def compute(self, inputs, outputs):
         """ PayloadAdapterMass computation """
-    
-        outputs['M_PLA'] = np.ones((1,))   
+        M_PL = inputs['M_PL']
+
+        M_PLA = 0.00477536 * (M_PL ** 1.01317) 
+
+        outputs['M_PLA'] = M_PLA
+        return outputs   
 
 # Reminder: inputs of compute()
 #   

@@ -10,8 +10,12 @@ class PadInterfaceMass(PadInterfaceMassBase):
 		
     def compute(self, inputs, outputs):
         """ PadInterfaceMass computation """
-    
-        outputs['M_pad'] = np.ones((1,))   
+        Ds = inputs['Ds']
+
+
+
+        outputs['M_pad'] = M_pad
+        return outputs  
 
 # Reminder: inputs of compute()
 #   

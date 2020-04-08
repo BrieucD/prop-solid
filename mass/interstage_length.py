@@ -10,8 +10,13 @@ class InterstageLength(InterstageLengthBase):
 		
     def compute(self, inputs, outputs):
         """ InterstageLength computation """
-    
-        outputs['L_interstage'] = np.ones((1,))   
+        L_conv = inputs['L_conv']
+        L_div = inputs['L_div']
+
+
+
+        outputs['L_interstage'] = L_interstage
+        return outputs  
 
 # Reminder: inputs of compute()
 #   

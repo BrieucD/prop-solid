@@ -10,8 +10,13 @@ class AvionicsMass(AvionicsMassBase):
 		
     def compute(self, inputs, outputs):
         """ AvionicsMass computation """
-    
-        outputs['M_avionics'] = np.ones((1,))   
+        Ds = inputs['Ds']
+        L_vehicle = inputs['L_vehicle']
+
+        M_avionics = 0.25 * (246.76+ 1.3183 * Ds * L_vehicle)
+
+        outputs['M_avionics'] = M_avionics
+        return outputs
 
 # Reminder: inputs of compute()
 #   

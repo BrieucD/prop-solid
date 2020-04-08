@@ -10,8 +10,13 @@ class FairingMass(FairingMassBase):
 		
     def compute(self, inputs, outputs):
         """ FairingMass computation """
-    
-        outputs['M_fairing'] = np.ones((1,))   
+        Ds = inputs['Ds']
+        L_fairing = inputs['L_fairing']
+
+        M_fairing = 49.3218 * ((L_fairing * Ds)**0.9054)
+
+        outputs['M_fairing'] = M_fairing
+        return outputs
 
 # Reminder: inputs of compute()
 #   

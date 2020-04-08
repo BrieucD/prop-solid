@@ -10,8 +10,13 @@ class InterstageMass(InterstageMassBase):
 		
     def compute(self, inputs, outputs):
         """ InterstageMass computation """
-    
-        outputs['M_interstage'] = np.ones((1,))   
+        Ds = inputs['Ds']
+        k_sm = inputs['k_sm']
+        S_int = inputs['S_int']
+
+
+        outputs['M_interstage'] = M_interstage
+        return outputs  
 
 # Reminder: inputs of compute()
 #   
