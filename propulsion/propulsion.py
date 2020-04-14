@@ -5,7 +5,7 @@
 from optparse import OptionParser
 from openmdao.api import Problem
 from openmdao.api import NonlinearBlockGS, ScipyKrylov
-from openmdao.api import view_model
+# from openmdao.api import view_model
 # from openmdao_extensions.reckless_nonlinear_block_gs import RecklessNonlinearBlockGS
 from propulsion.propulsion_base import PropulsionBase, PropulsionFactoryBase
 
@@ -39,6 +39,6 @@ if __name__ == "__main__":
     problem.setup()
     problem.final_setup()
     
-    if options.n2_view:
-        view_model(problem)
+    # if options.n2_view:
+    #     view_model(problem)
     
