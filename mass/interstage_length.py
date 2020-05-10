@@ -16,6 +16,9 @@ class InterstageLength(InterstageLengthBase):
         else:
             L_conv = inputs['L_conv']
             L_div = inputs['L_div']
+
+            L_interstage = L_conv + L_div + 0.1
+            
             outputs['L_interstage'] = L_interstage
         return outputs  
  

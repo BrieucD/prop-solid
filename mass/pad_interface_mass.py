@@ -15,6 +15,8 @@ class PadInterfaceMass(PadInterfaceMassBase):
             self._impl.compute(inputs, outputs)
         else:
             Ds = inputs['Ds']
+            
+            M_pad = 25.736 * np.pi * (Ds**2)/4 * (3.2808 * Ds)**0.5498
 
             outputs['M_pad'] = M_pad
         return outputs    

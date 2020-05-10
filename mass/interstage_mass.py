@@ -18,6 +18,8 @@ class InterstageMass(InterstageMassBase):
             k_sm = inputs['k_sm']
             S_int = inputs['S_int']
 
+            M_interstage = k_sm * 7.7165 * S_int * (3.3208 * Ds)**0.4856
+
             outputs['M_interstage'] = M_interstage
         return outputs  
 
